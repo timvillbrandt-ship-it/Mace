@@ -17,7 +17,7 @@ public final class HudRenderer {
 
     public static void render(GuiGraphicsExtractor g) {
         Minecraft mc = Compat.mc();
-        if (mc.player == null || mc.options.hideGui) return;
+        if (mc.player == null) return;
         HudModule hud = ModuleManager.get(HudModule.class);
         if (hud == null || !hud.enabled) return;
 
