@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "maceclient",
+  "version": "${version}",
+  "name": "MaceClient",
+  "description": "Mace-PvP Utility-Client mit ClickGUI.",
+  "environment": "client",
+  "entrypoints": { "client": ["com.maceclient.MaceClient"] },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": ">=26.2 <27",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
