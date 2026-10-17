@@ -20,6 +20,7 @@ public final class ModuleManager {
         MODULES.add(new BreachSwap());
         MODULES.add(new WindChargeBoost());
         MODULES.add(new StunSlam());
+        MODULES.add(new AutoTotem());
         MODULES.add(new HudModule());
         get(HudModule.class).enabled = true;
     }
