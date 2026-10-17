@@ -35,6 +35,6 @@ public final class Compat {
     /** Meldung im Spiel-Chat (nur lokal sichtbar). */
     public static void chat(String msg) {
         var p = mc().player;
-        if (p != null) p.displayClientMessage(Component.literal("[MaceClient] " + msg), false);
+        if (p != null) p.sendSystemMessage(Component.literal("[MaceClient] " + msg));
     }
 }
