@@ -54,7 +54,7 @@ public final class ModuleManager {
             }
             if (m.enabled) {
                 try { m.onTick(); }
-                catch (Throwable t) { m.enabled = false; t.printStackTrace(); } // Modul-Fehler crasht nie das Spiel
+                catch (Throwable t) { m.enabled = false; t.printStackTrace(); Compat.chat(m.name + " Fehler: " + t); } // Modul-Fehler crasht nie das Spiel
             }
         }
     }

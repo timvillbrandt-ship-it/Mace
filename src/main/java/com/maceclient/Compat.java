@@ -4,6 +4,7 @@ import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 
 /**
@@ -30,4 +31,10 @@ public final class Compat {
 
     /** Entity unter dem Fadenkreuz (null wenn keins). */
     public static Entity crosshairTarget() { return mc().crosshairPickEntity; }
+
+    /** Meldung im Spiel-Chat (nur lokal sichtbar). */
+    public static void chat(String msg) {
+        var p = mc().player;
+        if (p != null) p.displayClientMessage(Component.literal("[MaceClient] " + msg), false);
+    }
 }
